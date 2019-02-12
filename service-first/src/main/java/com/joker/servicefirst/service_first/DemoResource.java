@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RefreshScope
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/servicefirst")
 public class DemoResource {
 
 	@Value("${service1: Default Hello}")
