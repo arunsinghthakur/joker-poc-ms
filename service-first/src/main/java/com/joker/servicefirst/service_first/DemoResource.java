@@ -3,6 +3,8 @@ package com.joker.servicefirst.service_first;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -17,6 +19,8 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/api/servicefirst")
 public class DemoResource {
 
+	private final static Logger logger = LoggerFactory.getLogger(DemoResource.class);
+
 	@Autowired
 	private RestTemplate restTemplate;
 
@@ -25,6 +29,8 @@ public class DemoResource {
 
 	@GetMapping("/dummy")
 	public String getDummyMsg() throws RestClientException, URISyntaxException {
+		logger.info("Inside service first.......");
+		logger.info("Calling service second.......");
 		return "Message from first service :- " + message + ". Message from second service :- " + invokeSecondService();
 	}
 
