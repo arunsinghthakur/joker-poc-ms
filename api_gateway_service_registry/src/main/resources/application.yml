@@ -4,3 +4,6 @@ zuul:
     service-first:
       path: /servicefirst/**
       url: http://localhost:5001/api/servicefirst/
+    service-second:
+      path: /servicesecond/**
+      url: http://localhost:5002/api/servicesecond/ 
