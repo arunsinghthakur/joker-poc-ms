@@ -16,6 +16,7 @@
 		<module>config-server</module>
 		<module>service-first</module>
 		<module>service-second</module>
+		<module>service-third</module>
 	</modules>
 
 	 
