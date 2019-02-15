@@ -9,9 +9,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.joker.apigateway</groupId>
-	<artifactId>api_gateway_service_registry</artifactId>
+	<artifactId>service-registry</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>api_gateway_service_registry</name>
+	<name>service-registry</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -32,11 +32,7 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zuul</artifactId>
-			<version>1.4.6.RELEASE</version>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
