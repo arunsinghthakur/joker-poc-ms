@@ -24,7 +24,7 @@ public class ConsumerChannel {
 	@StreamListener(target = ConsumerMQChannel.CONSUMER)
 	public void fetchMsg(String msg) {
 		logger.info("Message from rabiitmq -" + msg);
-		this.msg = msg;
+		this.msg += msg;
 	}
 
 	String getMsg() {
