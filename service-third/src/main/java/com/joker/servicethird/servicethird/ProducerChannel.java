@@ -24,10 +24,10 @@ public class ProducerChannel {
 	@Value("${service3: Default Service Third}")
 	private String message;
 
-	@Scheduled(fixedRate = 1000 * 60 * 2)
+	@Scheduled(fixedRate = 1000 * 5)
 	public void send() {
 		logger.info("Inside service third.......");
-		Message<String> msg = MessageBuilder.withPayload("Message from service third : - " + message).build();
+		Message<String> msg = MessageBuilder.withPayload("Message from service third : - " + message + System.currentTimeMillis()).build();
 		logger.info("Sending message to MQ. " + msg);
 		channel.producer().send(msg);
 	}

@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.StreamListener;
-import org.springframework.messaging.MessageChannel;
+import org.springframework.context.annotation.Bean;
+import org.springframework.integration.dsl.IntegrationFlow;
+import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.messaging.SubscribableChannel;
 import org.springframework.stereotype.Component;
 
@@ -31,6 +33,16 @@ public class ConsumerChannel {
 		return msg;
 	}
 
+	@Bean
+	public IntegrationFlow handle() {
+		return IntegrationFlows
+				.from(channel.iconsumer())
+				.handle(String.class, (payload, headers) -> {
+			logger.info("Message from rabiitmq -" + payload);
+			return null;
+		}).get();
+	}
+
 }
 
 interface ConsumerMQChannel {
@@ -38,4 +50,10 @@ interface ConsumerMQChannel {
 
 	@Input(CONSUMER)
 	SubscribableChannel consumer();
+
+	String iCONSUMER = "integrationConsumer";
+
+	@Input(iCONSUMER)
+	SubscribableChannel iconsumer();
+
 }
