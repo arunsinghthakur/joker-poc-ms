@@ -33,9 +33,21 @@ public class DemoResource {
 		logger.info("Calling service second.......");
 		return "Message from first service :- " + message + ". Message from second service :- " + invokeSecondService();
 	}
+	
+	@GetMapping("/dummy/async")
+	public String getDummyMsgAsync() throws RestClientException, URISyntaxException {
+		logger.info("Inside service first async.......");
+		logger.info("Calling service second async.......");
+		return "Message from first service sync:- " + message + ". Message from second service async:- " + invokeSecondServiceAsync();
+	}
 
 	private String invokeSecondService() throws RestClientException, URISyntaxException {
 		return restTemplate.getForEntity(new URI("http://service-second/api/servicesecond/dummy"), String.class).getBody();
+
+	}
+	
+	private String invokeSecondServiceAsync() throws RestClientException, URISyntaxException {
+		return restTemplate.getForEntity(new URI("http://service-second/api/servicesecond/dummy/async"), String.class).getBody();
 
 	}
 }
