@@ -1,4 +1,4 @@
-package com.joker.apigateway.apigateway;
+package com.joker.apigateway.apigateway.security;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 
-public class SimpleFilter extends ZuulFilter {
-	private static Logger log = LoggerFactory.getLogger(SimpleFilter.class);
+public class AuthenticationFilter extends ZuulFilter {
+	private static Logger log = LoggerFactory.getLogger(AuthenticationFilter.class);
 
 	@Override
 	public String filterType() {
@@ -18,7 +18,7 @@ public class SimpleFilter extends ZuulFilter {
 
 	@Override
 	public int filterOrder() {
-		return 999;
+		return 1;
 	}
 
 	@Override

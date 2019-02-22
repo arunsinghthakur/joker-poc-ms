@@ -7,6 +7,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
+import com.joker.apigateway.apigateway.security.AuthenticationFilter;
+
 @EnableZuulProxy
 @EnableEurekaClient
 @EnableDiscoveryClient
@@ -18,8 +20,8 @@ public class ApiGatewayApplication {
 	}
 
 	@Bean
-	public SimpleFilter simpleFilter() {
-		return new SimpleFilter();
+	public AuthenticationFilter authenticationFilter() {
+		return new AuthenticationFilter();
 	}
 
 }
