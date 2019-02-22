@@ -1,4 +1,4 @@
-package com.joker.servicethird.servicethird;
+package com.joker.servicethird;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

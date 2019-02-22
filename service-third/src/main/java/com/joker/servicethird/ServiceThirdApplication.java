@@ -1,4 +1,4 @@
-package com.joker.servicethird.servicethird;
+package com.joker.servicethird;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

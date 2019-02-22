@@ -1,4 +1,4 @@
-package com.joker.servicesecond.servicesecond;
+package com.joker.servicesecond;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

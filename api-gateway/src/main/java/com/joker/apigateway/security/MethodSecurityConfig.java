@@ -1,4 +1,4 @@
-package com.joker.apigateway.apigateway.security;
+package com.joker.apigateway.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;

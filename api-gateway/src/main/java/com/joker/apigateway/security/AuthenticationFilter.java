@@ -1,4 +1,4 @@
-package com.joker.apigateway.apigateway.security;
+package com.joker.apigateway.security;
 
 import javax.servlet.http.HttpServletRequest;
 

@@ -1,4 +1,4 @@
-package com.joker.apigateway.serviceregistry;
+package com.joker.serviceregistry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.joker.apigateway.apigateway.security;
+package com.joker.apigateway.security;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

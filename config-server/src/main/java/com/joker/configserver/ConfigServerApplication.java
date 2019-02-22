@@ -1,4 +1,4 @@
-package com.joker.configserver.configserver;
+package com.joker.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

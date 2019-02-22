@@ -1,4 +1,4 @@
-package com.joker.servicesecond.servicesecond;
+package com.joker.servicesecond;
 
 import java.util.concurrent.CompletableFuture;
 
